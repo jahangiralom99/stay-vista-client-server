@@ -2,6 +2,7 @@ import Category from "../../components/Rooms/Categories/Category"
 import Rooms from "../../components/Rooms/Rooms"
 
 const Home = () => {
+  
   return (
     <div>
       <Category/>

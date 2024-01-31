@@ -4,7 +4,7 @@ import Container from "../Shared/Container";
 
 const Rooms = () => {
     const [rooms, setRooms] = useState([]);
-    console.log(rooms);
+    // console.log(rooms);
 
     useEffect(() => {
         fetch('rooms.json')
