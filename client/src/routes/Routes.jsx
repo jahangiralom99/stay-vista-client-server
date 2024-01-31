@@ -8,7 +8,7 @@ import SignUp from '../pages/SignUp/SignUp'
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <Main />,
+    element: <Main/>,
     errorElement: <ErrorPage />,
     children: [
       {

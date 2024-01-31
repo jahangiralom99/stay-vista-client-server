@@ -1,12 +1,15 @@
-import { initializeApp } from 'firebase/app'
+import { initializeApp } from 'firebase/app';
+import { getAuth } from "firebase/auth";
+
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_apiKey,
-  authDomain: import.meta.env.VITE_authDomain,
-  projectId: import.meta.env.VITE_projectId,
-  storageBucket: import.meta.env.VITE_storageBucket,
-  messagingSenderId: import.meta.env.VITE_messagingSenderId,
-  appId: import.meta.env.VITE_appId,
+  apiKey: "AIzaSyA1MMMUTVy2nHLzYb9swrPhBG1ivgZpVM8",
+  authDomain: "stay-vista-starter.firebaseapp.com",
+  projectId: "stay-vista-starter",
+  storageBucket: "stay-vista-starter.appspot.com",
+  messagingSenderId: "558715877144",
+  appId: "1:558715877144:web:4521653051eac4bc5c506d"
 }
 
-export const app = initializeApp(firebaseConfig)
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
