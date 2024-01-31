@@ -13,15 +13,14 @@ const CategoryCard = ({ category, searchCategory }) => {
     let currentQuery = {};
     if (params) {
       currentQuery = queryString.parse(params.toString());
-
-      const updateQuery = { ...currentQuery, category: label };
-
-      const url = queryString.stringifyUrl({
-        url: "/",
-        query: updateQuery,
-      });
-      navigate(url);
     }
+    const updateQuery = { ...currentQuery, category: label };
+
+    const url = queryString.stringifyUrl({
+      url: "/",
+      query: updateQuery,
+    });
+    navigate(url);
   };
 
   params.get("category");
@@ -29,7 +28,11 @@ const CategoryCard = ({ category, searchCategory }) => {
   return (
     <div
       onClick={handleClickBtn}
-      className={`flex flex-col items-center justify-center gap-2 p-5 hover:text-neutral-800 transition cursor-pointer border-b-2 ${searchCategory ? "border-b-neutral-800 text-neutral-800" : "border-transparent text-neutral-500"}`}
+      className={`flex flex-col items-center justify-center gap-2 p-5 hover:text-neutral-800 transition cursor-pointer border-b-2 ${
+        searchCategory
+          ? "border-b-neutral-800 text-neutral-800"
+          : "border-transparent text-neutral-500"
+      }`}
     >
       <Icon size={26}></Icon>
       <h2 className="text-sm font-medium">{label}</h2>
