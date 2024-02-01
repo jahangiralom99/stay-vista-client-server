@@ -39,7 +39,7 @@ const Rooms = () => {
           ))}
         </div>
       ) : (
-        <div className="flex items-center justify-center min-h[calc(100vh-300px)]">
+        <div className="flex items-center justify-center min-h-[calc(100vh-300px)]">
           <Heading
             center={true}
             subtitle={"Please Select Other Category"}
